@@ -3,7 +3,7 @@ cd build
 
 set CONFIGURATION=Release
 
-cmake .. -G "%CMAKE_GENERATOR%" ^
+cmake .. -GNinja ^
          -DCMAKE_BUILD_TYPE=%CONFIGURATION% ^
          -DCMAKE_PREFIX_PATH="%PREFIX%" ^
          -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
