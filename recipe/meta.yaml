@@ -1,5 +1,5 @@
-{% set version = "2.0.5" %}
-{% set checksum = "594ce65aac1afef61b246776c6b3262210df59c92775aafd41831286c1275d98" %}
+{% set version = "2.0.6" %}
+{% set checksum = "e187576741b60c349c2248cbe0f6d1edc947f1df07248b8dad8c64b4c69498a2" %}
 
 package:
   name: z5py
@@ -10,7 +10,7 @@ source:
     sha256: {{ checksum }}
 
 build:
-  number: 3
+  number: 1
   skip: True  # [win and vc<14]
   skip: True  # [py27]
 
@@ -51,10 +51,10 @@ requirements:
 test:
   imports:
     - z5py
-  #source_files:
-  #  - src/python/test/*.py
-  #commands:
-  #  - python -m unittest discover -s src/python/test -v
+  source_files:
+    - src/python/test/*.py
+  commands:
+    - python -m unittest discover -s src/python/test -v
 
 about:
   home: https://github.com/constantinpape/z5
