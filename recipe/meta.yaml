@@ -10,7 +10,7 @@ source:
     sha256: {{ checksum }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
   skip: True  # [py27]
 
@@ -41,10 +41,6 @@ requirements:
     - bzip2
     - xz
     - zlib
-    # we build with boost filesystem on macos and so
-    # we need to pin the boost version, see also
-    # https://github.com/conda-forge/z5py-feedstock/issues/24
-    - {{ pin_compatible('boost-cpp') }}  # [osx]
     # lz4 builds on conda are broken
     # - lz4-c
 
