@@ -10,7 +10,7 @@ source:
     sha256: {{ checksum }}
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win and vc<14]
   skip: True  # [py27]
 
@@ -51,10 +51,10 @@ requirements:
 test:
   imports:
     - z5py
-  #source_files:
-  #  - src/python/test/*.py
-  #commands:
-  #  - python -m unittest discover -s src/python/test -v
+  source_files:
+    - src/python/test/*.py
+  commands:
+    - python -m unittest discover -s src/python/test -v
 
 about:
   home: https://github.com/constantinpape/z5
