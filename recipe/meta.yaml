@@ -13,8 +13,6 @@ build:
   number: 0
   skip: True  # [win and vc<14]
   skip: True  # [py27]
-  # windows build with python 3.7 fails with puzzling test errors
-  skip: True  # [win and py37]
 
 requirements:
   build:
