@@ -1,5 +1,5 @@
-{% set version = "2.0.6" %}
-{% set checksum = "e187576741b60c349c2248cbe0f6d1edc947f1df07248b8dad8c64b4c69498a2" %}
+{% set version = "2.0.8" %}
+{% set checksum = "fec4457cc6787ceb6a4292b9c4523efc9f6a9e6a92f57c885469c46f80a8445b" %}
 
 package:
   name: z5py
@@ -10,7 +10,7 @@ source:
     sha256: {{ checksum }}
 
 build:
-  number: 2
+  number: 1
   skip: True  # [win and vc<14]
   skip: True  # [py27]
 
