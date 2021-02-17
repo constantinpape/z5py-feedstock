@@ -1,18 +1,18 @@
-{% set version = "2.0.8" %}
-{% set checksum = "fec4457cc6787ceb6a4292b9c4523efc9f6a9e6a92f57c885469c46f80a8445b" %}
+{% set version = "2.0.9" %}
+{% set checksum = "c2004b7528ab47013fe2a321aad073c0aa49790dd1d294942f26e04e64f44428" %}
 
 package:
   name: z5py
   version: {{ version }}
 
 source:
-    url: https://github.com/constantinpape/z5/archive/{{ version }}.tar.gz
-    sha256: {{ checksum }}
+  url: https://github.com/constantinpape/z5/archive/{{ version }}.tar.gz
+  sha256: {{ checksum }}
 
 build:
   number: 0
-  skip: True  # [win and vc<14]
-  skip: True  # [py27]
+  skip: true  # [win and vc<14]
+  skip: true  # [py27]
 
 requirements:
   build:
