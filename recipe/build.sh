@@ -7,12 +7,8 @@ cd build
 
 PYTHON_EXECUTABLE="${PREFIX}/bin/python"
 
-# clang is not using c++17 by default on conda forge yet, see https://github.com/conda-forge/clang-compiler-activation-feedstock/issues/17
-# so we need to switch the c++ standard manually:
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    # CXXFLAGS="${CXXFLAGS//-std=c++14/-std=c++17}"
-    # CXXFLAGS="${CXXFLAGS} -mmacosx-version-min=10.15"
-    CXXFLAGS="-std=c++17"
+if [[ "${target_platform}" == "osx-64" ]]; then
+    export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
 ##
