@@ -7,6 +7,10 @@ cd build
 
 PYTHON_EXECUTABLE="${PREFIX}/bin/python"
 
+# clang is not using c++17 by default on conda forge yet, see https://github.com/conda-forge/clang-compiler-activation-feedstock/issues/17
+# so we need to switch the c++ standard manually:
+CXXFLAGS="${CXXFLAGS//-std=c++14/-std=c++17}"
+
 ##
 ## Configure
 ##
