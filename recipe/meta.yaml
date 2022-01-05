@@ -10,7 +10,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -19,13 +19,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - ninja  # [win]
+    - make  # [not win]
   host:
     - python
     - boost-cpp >=1.63
     - numpy
-    - xtensor >=0.21,<0.22
-    - xtensor-python >=0.24,<0.25
-    - xsimd >=7,<8
+    - xtensor >=0.24,<0.25
+    - xtensor-python >=0.26,<0.27
+    - xsimd >=8,<9
     - blosc
     - bzip2
     - xz
