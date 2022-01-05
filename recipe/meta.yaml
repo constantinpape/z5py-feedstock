@@ -19,6 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - ninja  # [win]
+    - make  # [not win]
   host:
     - python
     - boost-cpp >=1.63
