@@ -1,4 +1,4 @@
-{% set version = "2.0.11" %}
+{% set version = "2.0.12" %}
 {% set checksum = "a84d49835489548a626231d9f87a607e3b614246cd0a99847a0bcb7d42459d07" %}
 
 package:
@@ -10,7 +10,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
