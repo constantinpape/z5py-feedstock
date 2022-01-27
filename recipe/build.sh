@@ -5,14 +5,11 @@
 mkdir -p build
 cd build
 
-# we build with boost fs in macos
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    BOOST_FS=ON
-else
-    BOOST_FS=OFF
-fi
-
 PYTHON_EXECUTABLE="${PREFIX}/bin/python"
+
+if [[ "${target_platform}" == "osx-64" ]]; then
+    export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+fi
 
 ##
 ## Configure
@@ -39,7 +36,6 @@ cmake .. \
         -DWITH_XZ=ON \
         -DWITH_LZ4=OFF \
         -DWITHIN_TRAVIS=OFF \
-        -DWITH_BOOST_FS=${BOOST_FS} \
 
 
 ##
