@@ -1,5 +1,5 @@
-{% set version = "2.0.14" %}
-{% set checksum = "3aed73117c303c674d196bc3823665c4d84ed8d9ec2498fba96bdf3b1fb1d898" %}
+{% set version = "2.0.15" %}
+{% set checksum = "dec5f9158d621bfe6216e051fdade095e47a3f78fbbd7e584b3465aa1ecd7eec" %}
 
 package:
   name: z5py
