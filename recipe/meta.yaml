@@ -10,7 +10,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win and vc<14]
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - make  # [not win]
   host:
     - python
-    - boost-cpp >=1.63
+    - libboost-headers
     - numpy
     - xtensor >=0.24,<0.25
     - xtensor-python >=0.26,<0.27
