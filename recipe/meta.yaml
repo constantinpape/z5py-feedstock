@@ -1,5 +1,5 @@
-{% set version = "2.0.17" %}
-{% set checksum = "76acaeec7203b8d3baec45ccce82cd260dc1893f1516640acec5de6d74c078ef" %}
+{% set version = "2.0.18" %}
+{% set checksum = "210d92a6e51bbad3226b5c6bad5b40564adb52a63638ef76687c6b90580239ba" %}
 
 package:
   name: z5py
@@ -20,6 +20,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cmake
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - ninja  # [win]
     - make  # [not win]
