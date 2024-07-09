@@ -28,7 +28,6 @@ cmake ${CMAKE_ARGS} .. \
         -DCMAKE_CXX_FLAGS_DEBUG="${CXXFLAGS}" \
 \
         -DPYTHON_EXECUTABLE=${PYTHON_EXECUTABLE} \
-        -DBOOST_ROOT=${PREFIX} \
         -DBUILD_Z5PY=ON \
         -DWITH_BLOSC=ON \
         -DWITH_ZLIB=ON \

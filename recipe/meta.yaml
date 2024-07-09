@@ -40,7 +40,6 @@ requirements:
     # - lz4-c
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - blosc
     - bzip2
     - xz
