@@ -8,9 +8,10 @@ package:
 source:
   url: https://github.com/constantinpape/z5/archive/{{ version }}.tar.gz
   sha256: {{ checksum }}
-
+  patches:
+    - python_site.patch
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -29,7 +30,7 @@ requirements:
     - numpy
     - xtensor >=0.24,<0.25
     - xtensor-python >=0.26,<0.27
-    - xsimd >=8,<9
+    - xsimd >=10,<11
     - blosc
     - bzip2
     - xz
@@ -39,7 +40,6 @@ requirements:
     # - lz4-c
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - blosc
     - bzip2
     - xz
