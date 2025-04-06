@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/constantinpape/z5/archive/{{ version }}.tar.gz
   sha256: {{ checksum }}
-  patches:
-    - python_site.patch
 build:
   number: 0
   skip: true  # [win and vc<14]
