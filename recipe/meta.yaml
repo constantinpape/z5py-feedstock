@@ -1,5 +1,5 @@
-{% set version = "2.0.19" %}
-{% set checksum = "99ea3906b2e708d09f0fd8d8828985f96594eb507fc5de6c1726ea7ac1e6ac08" %}
+{% set version = "2.0.20" %}
+{% set checksum = "e0bee8b3a92b7b674891bc9e1fc3bf73ede5837afa87e6c2ac9228a7e095a4b9" %}
 
 package:
   name: z5py
@@ -26,9 +26,9 @@ requirements:
   host:
     - python
     - numpy
-    - xtensor >=0.24,<0.25
-    - xtensor-python >=0.26,<0.27
-    - xsimd >=10,<11
+    - xtensor >=0.26,<0.27
+    - xtensor-python >=0.28,<0.29
+    - xsimd >=13,<14
     - blosc
     - bzip2
     - xz
