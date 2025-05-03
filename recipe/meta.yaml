@@ -19,7 +19,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cmake
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - ninja  # [win]
     - make  # [not win]
@@ -31,19 +31,13 @@ requirements:
     - xsimd >=13,<14
     - blosc
     - bzip2
-    - xz
+    - liblzma-devel
     - zlib
     - nlohmann_json
     # lz4 builds on conda are broken
     # - lz4-c
   run:
     - python
-    - blosc
-    - bzip2
-    - xz
-    - zlib
-    # lz4 builds on conda are broken
-    # - lz4-c
 
 test:
   imports:
