@@ -12,9 +12,9 @@ cmake .. -GNinja ^
          -DWITH_BZIP2=ON ^
          -DWITH_XZ=ON ^
          -DWITH_LZ4=OFF ^
+         -DWITH_ZSTD=ON ^
          -DWITHIN_TRAVIS=OFF ^
          -DBUILD_Z5PY=ON ^
-         -DBUILD_WITH_ZSTD=ON ^
          -DPYTHON_EXECUTABLE="%PYTHON%"
 
 cmake --build . --config %CONFIGURATION% --target install
