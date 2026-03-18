@@ -14,6 +14,7 @@ cmake .. -GNinja ^
          -DWITH_LZ4=OFF ^
          -DWITHIN_TRAVIS=OFF ^
          -DBUILD_Z5PY=ON ^
+         -DBUILD_WITH_ZSTD=ON ^
          -DPYTHON_EXECUTABLE="%PYTHON%"
 
 cmake --build . --config %CONFIGURATION% --target install
