@@ -10,6 +10,7 @@ source:
   sha256: {{ checksum }}
 build:
   number: 0
+  skip: true  # [py<311]
 
 requirements:
   build:
@@ -23,7 +24,7 @@ requirements:
     - ninja  # [win]
     - make  # [not win]
   host:
-    - python >=3.11
+    - python
     - numpy
     - nanobind
     - blosc
@@ -35,7 +36,7 @@ requirements:
     - nlohmann_json
     - lz4-c
   run:
-    - python >=3.11
+    - python
     - numpy
 
 test:
