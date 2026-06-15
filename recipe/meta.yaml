@@ -1,5 +1,5 @@
-{% set version = "3.0.0" %}
-{% set checksum = "493164cbf2a1b51f15f8cd3d2dbc8f10147f491845af9137c5547cc4d11bb359" %}
+{% set version = "3.0.1" %}
+{% set checksum = "5306b31d64f86d97c85518c6a7efd0468e12814e027f788b650361862b1a1f63" %}
 
 package:
   name: z5py
@@ -9,7 +9,7 @@ source:
   url: https://github.com/constantinpape/z5/archive/{{ version }}.tar.gz
   sha256: {{ checksum }}
 build:
-  number: 1
+  number: 0
   skip: true  # [py<311]
 
 requirements:
